@@ -1,0 +1,72 @@
+/*home.css*/ 
+.background {
+    background-image: url('../assets/images/home/bg_home_page.jpg');
+    background-size: cover; /* Зображення заповнює весь контейнер */
+    background-position: center; /* Центрує зображення */
+    width: 100vw; /* Ширина - 100% від ширини вікна */
+    height: 55vh; /* Висота - 100% від висоти вікна */
+    position: relative; /* Абсолютне позиціонування */
+    top: 0; /* Вирівнює з верхом */
+    left: 0; /* Вирівнює з лівим краєм */
+    z-index: 1; /* Встановлює порядок на фоні */
+}
+
+.centered-text {
+    position: absolute; /* Абсолютне позиціонування */
+    top: 50%; /* Центруємо по вертикалі */
+    left: 50%; /* Центруємо по горизонталі */
+    transform: translate(-50%, -50%); /* Зсув для точного центрування */
+    color: white; /* Колір тексту */
+    font-size: 56px; /* Розмір шрифту, налаштуйте за потреби */
+    text-align: center; /* Центрування тексту */
+    z-index: 10002; /* Вищий порядок, щоб текст був над фоном */
+}
+
+.plates {
+    display: flex;
+    flex-wrap: wrap; /* Дозволяє елементам переноситись на новий ряд */
+    justify-content: flex-start;
+    gap: 40px;  /* Рівномірний відступ між елементами */
+    padding: 10px;
+    justify-content: space-evenly; /* Рівномірний розподіл елементів */
+    width: 100%;
+}
+
+.grid {
+    display: flex;
+    justify-content: flex-start;
+    gap: 100px;  /* Рівномірний відступ між елементами */
+    padding: 10px;
+    justify-content: space-evenly
+}
+
+.grid div {
+    width: 200px; /* Фіксована ширина для всіх елементів */
+    height: 200px; /* Фіксована висота для всіх елементів */
+    text-align: center;
+    flex-shrink: 0; /* Запобігає зміні розміру елементів */
+}
+
+.grid img {
+    width: 100%; /* Зображення займає всю ширину контейнера */
+    height: 100%; /* Зображення займає всю висоту контейнера */
+    object-fit: cover; /* Забезпечує, що зображення залишиться пропорційним і повністю заповнюватиме квадрат */
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.grid p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: black;
+}
+
+.grid a {
+    text-decoration: none;
+    color: inherit;
+}
