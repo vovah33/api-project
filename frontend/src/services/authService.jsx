@@ -1,8 +1,8 @@
-const API_URL = "http://localhost:8000/api/auth";
+const API_URL = "/api/auth";
 
 
 export const register = async (userData) => {
-  const response = await fetch("http://localhost:8000/api/auth/register", {
+  const response = await fetch(API_URL + "/register", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

@@ -14,6 +14,11 @@ return Application::configure(basePath: dirname(__DIR__))
     ->withMiddleware(function (Middleware $middleware) {
         $middleware->appendToGroup('api', HandleCors::class);
     })
+    ->withMiddleware(function (Middleware $middleware) {
+        $middleware->validateCsrfTokens(except: [
+            'api/*', //Disables cross site request forgery checks - https://codecourse.com/articles/laravel-419-page-expired-explained
+        ]);
+    })
     ->withExceptions(function (Exceptions $exceptions) {
         //
     })->create();
